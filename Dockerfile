@@ -8,6 +8,6 @@ RUN go build -o hello hello.go
 
 FROM alpine:3
 
-COPY --from=build hello /bin
+COPY --from=build /build/hello /bin
 
 CMD ['hello']
