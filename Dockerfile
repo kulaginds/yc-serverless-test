@@ -10,4 +10,6 @@ FROM alpine:3
 
 COPY --from=build /build/hello /bin
 
+EXPOSE 8080
+
 CMD ['hello']
