@@ -1,4 +1,4 @@
-FROM golang:1.16 as build
+FROM golang:1.16-alpine as build
 
 COPY . /build
 
@@ -12,4 +12,4 @@ COPY --from=build /build/hello /bin
 
 EXPOSE 8080
 
-CMD ['hello']
+CMD /bin/hello
